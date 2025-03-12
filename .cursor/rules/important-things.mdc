@@ -1,0 +1,14 @@
+---
+description: # important things to keep in mind.
+globs: 
+alwaysApply: true
+---
+
+# Always follow the below instructions.
+
+1. The fewer lines of code, the better.
+2. Proceed like a senior developer // 10x engineer
+3. DO NOT STOP WORKING UNTIL YOU have implemented the feature fully and completely.
+4. Whenever there is a persistent error, start by writing 3 reasoning paragraphs analysing what the error might be, do not jump to conclusions.
+5. Answer in short.
+6. DO NOT DELETE THE COMMENTS 

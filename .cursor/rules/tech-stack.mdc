@@ -1,0 +1,7 @@
+---
+description: This the project techstack
+globs: 
+alwaysApply: false
+---
+
+[pyproject.toml](mdc:pyproject.toml)
