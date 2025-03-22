@@ -57,6 +57,8 @@ templates-hq/
 - **Developer-Friendly**: Designed for easy understanding with detailed docstrings and usage guidance
 - **Modern Python Tooling**: All Python templates use uv for fast, reliable dependency management
 
+> **Note**: Comments at the top of code files in templates are for reference only to provide context for the Cursor AI agent and should NOT be included when scaffolding new projects.
+
 ## 🛠️ Using Templates
 
 Each template folder contains a comprehensive README.md with specific instructions, but here's the general process:

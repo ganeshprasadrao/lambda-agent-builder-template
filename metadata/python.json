@@ -77,7 +77,8 @@
       "implementation_details": {
         "agent_architecture": "The agent uses LangChain to integrate with LLMs (default: OpenAI) and implements tools for extended capabilities",
         "deployment": "Deployable to AWS Lambda using Zappa, exposing a RESTful API via API Gateway",
-        "state_management": "Stateless design allowing for serverless deployment, with context passed in requests"
+        "state_management": "Stateless design allowing for serverless deployment, with context passed in requests",
+        "code_comments": "Comments at the top of code files are for reference only to provide context for the Cursor AI agent and should NOT be included when scaffolding new projects"
       },
       "directory": "python_templates/aws_lambda_agent_builder"
     },
@@ -171,7 +172,8 @@
       "implementation_details": {
         "api_structure": "Organized by API version with dedicated endpoint modules for maintainability",
         "deployment": "Zappa handles AWS Lambda deployment with environment-specific configurations",
-        "error_handling": "Standardized error responses for consistent API behavior"
+        "error_handling": "Standardized error responses for consistent API behavior",
+        "code_comments": "Comments at the top of code files are for reference only to provide context for the Cursor AI agent and should NOT be included when scaffolding new projects"
       },
       "directory": "python_templates/aws_lambda_fast_api"
     }
