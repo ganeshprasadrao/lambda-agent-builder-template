@@ -1,3 +1,22 @@
+"""
+Main entry point for the AWS Lambda LLM-based Agent Builder.
+
+This file provides the core functionality for building and running a customizable
+AI agent based on Large Language Models (LLMs) deployed as an AWS Lambda function.
+It demonstrates how to structure an agent-based application that can process inputs,
+generate responses, and manage state using AWS services.
+
+Common use cases:
+- Conversational AI assistants
+- Serverless AI agent deployment
+- Task-specific AI agents
+- Multi-step reasoning and agent workflows
+- Integration with AWS services for AI applications
+
+The agent architecture follows a modular approach with customizable components
+for different LLM providers, prompting strategies, and deployment patterns.
+"""
+
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel

@@ -1,3 +1,20 @@
+"""
+Logging configuration using Loguru.
+
+This file sets up a centralized logging system using Loguru with proper formatting
+and configuration. It includes an InterceptHandler to capture standard Python
+logging messages and redirect them to Loguru for consistent logging output.
+
+Common use cases:
+- Application-wide logging configuration
+- Intercept standard Python logging
+- Structured logging with contextual information
+- Custom log formatting
+- Log level configuration
+
+Use get_logger() to obtain a configured logger for any module.
+"""
+
 import logging
 import sys
 from loguru import logger

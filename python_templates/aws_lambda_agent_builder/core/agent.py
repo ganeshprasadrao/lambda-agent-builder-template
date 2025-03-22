@@ -1,3 +1,21 @@
+"""
+Core agent implementation for the LLM-based agent system.
+
+This file defines the Agent class and factory method that creates and configures
+the LLM-powered agent. It implements the agent's core functionality, including
+interaction with the LLM provider, handling of context, and response processing.
+
+Common use cases:
+- Building conversational AI assistants
+- Implementing custom LLM-based agents
+- Integrating different LLM providers (OpenAI, Anthropic, etc.)
+- Creating domain-specific AI agents with context management
+- Multi-step reasoning with memory and state management
+
+The agent architecture is modular and extensible, allowing for different LLM
+providers, prompt strategies, and custom functionality to be implemented.
+"""
+
 from typing import Dict, List, Any, Optional
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 from langchain_openai import ChatOpenAI

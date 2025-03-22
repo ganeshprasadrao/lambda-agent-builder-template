@@ -1,3 +1,20 @@
+"""
+ASGI to WSGI conversion utility.
+
+This file provides a utility function to convert an ASGI application (like FastAPI)
+to a WSGI application. This allows greater compatibility with some deployment
+platforms that may not fully support ASGI yet.
+
+Common use cases:
+- Legacy WSGI server compatibility
+- Integration with WSGI middleware
+- Deployment on platforms requiring WSGI
+- Custom deployment scenarios where ASGI isn't supported
+
+Note: This utility is provided for compatibility but Mangum is the preferred
+method for AWS Lambda deployment of FastAPI applications.
+"""
+
 from typing import Callable, Dict, List, Tuple, Union
 import asyncio
 

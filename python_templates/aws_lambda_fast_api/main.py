@@ -1,3 +1,21 @@
+"""
+FastAPI application main entry point.
+
+This file defines the FastAPI application with sample routes for a RESTful API.
+It demonstrates proper configuration, logging setup, and route patterns for an API
+that will be deployed on AWS Lambda. Use this as the main application file to
+extend with your own routes and business logic.
+
+Common use cases:
+- Building RESTful APIs with FastAPI
+- AWS Lambda serverless deployment
+- API versioning and documentation
+- Structured error handling and logging
+
+For local development, run directly with: python main.py
+For AWS deployment, use Zappa with the lambda_handler.py module.
+"""
+
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel

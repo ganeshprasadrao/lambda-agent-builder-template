@@ -1,3 +1,20 @@
+"""
+Logging configuration for the LLM agent system.
+
+This file sets up a centralized logging system using Loguru with proper formatting
+and configuration. It includes an InterceptHandler to capture standard Python
+logging messages and redirect them to Loguru for consistent logging output.
+
+Common use cases:
+- Application-wide logging configuration
+- Structured logging with contextual information
+- Intercept standard Python logging
+- Custom log formatting
+- Log level configuration
+
+Use get_logger() to obtain a configured logger for any module.
+"""
+
 from loguru import logger
 import sys
 from typing import Optional

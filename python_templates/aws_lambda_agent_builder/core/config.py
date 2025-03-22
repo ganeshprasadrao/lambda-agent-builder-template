@@ -1,3 +1,20 @@
+"""
+Configuration settings for the LLM agent system.
+
+This file defines the application settings using Pydantic BaseSettings,
+providing type-safe configuration management with environment variable
+support. Settings are cached using lru_cache for performance.
+
+Common use cases:
+- LLM model configuration
+- API metadata configuration
+- Agent behavior settings
+- Environment-specific configurations
+- Logging settings
+
+Override settings by creating a .env file or setting environment variables.
+"""
+
 from pydantic_settings import BaseSettings
 from typing import Optional
 from functools import lru_cache

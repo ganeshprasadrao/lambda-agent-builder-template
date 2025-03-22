@@ -1,3 +1,21 @@
+"""
+Application configuration settings using Pydantic.
+
+This file defines the application settings using Pydantic's BaseSettings,
+which allows for type-safe configuration management with environment
+variables and .env file support. Settings are cached using lru_cache
+for performance optimization.
+
+Common use cases:
+- Environment-specific configuration
+- API metadata configuration
+- Database connection settings
+- AWS region configuration
+- Logging level configuration
+
+To override settings, create a .env file or set environment variables.
+"""
+
 from pydantic_settings import BaseSettings
 from typing import Optional
 from functools import lru_cache
