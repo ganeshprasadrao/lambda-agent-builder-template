@@ -1,0 +1,44 @@
+{
+  "templates": [
+    {
+      "name": "lambda-agent-builder",
+      "github_url": "https://github.com/ganeshprasadrao/lambda-agent-builder-template",
+      "description": "A powerful template for building AI agents using Python, AWS Lambda, FastAPI, and LangChain/LangGraph",
+      "purpose": "Provides a production-ready foundation for deploying AI agents as serverless functions",
+      "use_cases": [
+        "Conversational AI agents that need to scale",
+        "AI assistants deployed on AWS infrastructure",
+        "Serverless LLM-powered applications",
+        "RESTful AI services with low latency requirements"
+      ],
+      "tech_stack": [
+        "Python 3.12+",
+        "FastAPI",
+        "AWS Lambda",
+        "Zappa",
+        "LangChain/LangGraph"
+      ],
+      "structure": {
+        "core/": "Core agent logic and components",
+        "core/agent.py": "Agent implementation",
+        "core/chains/": "LangChain chains",
+        "core/tools/": "Custom tools",
+        "core/utils/": "Utility functions",
+        "main.py": "FastAPI application",
+        "lambda_handler.py": "AWS Lambda handler",
+        "zappa_settings.json": "Zappa deployment configuration",
+        "pyproject.toml": "Project dependencies"
+      },
+      "features": [
+        "High-performance API endpoints with FastAPI",
+        "AWS Lambda deployment using Zappa",
+        "LangChain/LangGraph integration",
+        "Environment management and security best practices",
+        "Comprehensive logging and monitoring",
+        "Serverless architecture for scalability",
+        "Local development environment"
+      ],
+      "directory": "aws_lambda_agent_builder"
+    }
+  ]
+}
