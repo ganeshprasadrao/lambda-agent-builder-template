@@ -2,7 +2,7 @@
   "templates": [
     {
       "name": "lambda-agent-builder",
-      "github_url": "https://github.com/ganeshprasadrao/lambda-agent-builder-template",
+      "github_url": "https://github.com/ganeshprasadrao/templates-hq",
       "description": "A powerful template for building AI agents using Python, AWS Lambda, FastAPI, and LangChain/LangGraph",
       "purpose": "Provides a production-ready foundation for deploying AI agents as serverless functions",
       "use_cases": [
@@ -38,7 +38,46 @@
         "Serverless architecture for scalability",
         "Local development environment"
       ],
-      "directory": "aws_lambda_agent_builder"
+      "directory": "python_templates/aws_lambda_agent_builder"
+    },
+    {
+      "name": "lambda-fastapi",
+      "github_url": "https://github.com/ganeshprasadrao/templates-hq",
+      "description": "A lightweight template for building FastAPI applications deployed on AWS Lambda",
+      "purpose": "Provides a production-ready foundation for deploying FastAPI applications as serverless functions",
+      "use_cases": [
+        "RESTful APIs that need to scale",
+        "Microservices deployed on AWS infrastructure",
+        "Serverless web applications",
+        "API services with low latency requirements"
+      ],
+      "tech_stack": [
+        "Python 3.12+",
+        "FastAPI",
+        "AWS Lambda",
+        "Zappa",
+        "Mangum"
+      ],
+      "structure": {
+        "core/": "Core application components",
+        "core/config.py": "Application configuration",
+        "core/utils/": "Utility functions",
+        "core/utils/logger.py": "Logging configuration",
+        "core/utils/asgi_to_wsgi.py": "ASGI to WSGI converter",
+        "main.py": "FastAPI application",
+        "lambda_handler.py": "AWS Lambda handler",
+        "zappa_settings.json": "Zappa deployment configuration",
+        "pyproject.toml": "Project dependencies"
+      },
+      "features": [
+        "High-performance API endpoints with FastAPI",
+        "AWS Lambda deployment using Zappa",
+        "Environment management and security best practices",
+        "Comprehensive logging with Loguru",
+        "Serverless architecture for scalability",
+        "Local development environment"
+      ],
+      "directory": "python_templates/aws_lambda_fast_api"
     }
   ]
 }
