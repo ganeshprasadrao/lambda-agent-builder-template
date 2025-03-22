@@ -7,6 +7,7 @@ from core.config import get_settings
 from core.utils.logger import get_logger
 import os
 from dotenv import load_dotenv
+import logging
 
 # Load environment variables
 load_dotenv()
