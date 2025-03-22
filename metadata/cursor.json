@@ -13,50 +13,115 @@
       ],
       "tech_stack": ["Cursor", "Claude/GPT models", "Markdown"],
       "structure": {
-        "agent.md": "Main agent persona and capabilities definition",
-        "rulebook.md": "Rules and guidelines for the agent's behavior"
+        "agent-index.md": "Index file for agent components",
+        "agent/identity.md": "Agent identity definition",
+        "agent/capabilities.md": "Agent capabilities definition",
+        "agent/limitations.md": "Agent limitations definition",
+        "rulebook-index.md": "Index file for rulebook components",
+        "rulebook/general-principles.md": "General coding principles",
+        "rulebook/documentation-testing.md": "Documentation and testing standards",
+        "rulebook/security-practices.md": "Security best practices",
+        "rulebook/workflow-preferences.md": "Coding workflow preferences",
+        "rulebook/execution-priorities.md": "Execution priorities and mindset",
+        "rulebook/project-guidelines.md": "Project execution guidelines",
+        "rulebook/tech-stack.md": "Tech stack preferences",
+        "rulebook/testing-workflow.md": "Testing workflow and TDD process"
       },
       "features": [
         "Structured agent persona definition",
         "Comprehensive rulebook for consistent behavior",
+        "Modular components for targeted context loading",
         "Easy customization for specific domains",
         "Compatible with Cursor's AI capabilities",
         "Clear organization of agent skills and limitations"
       ],
       "key_files": {
-        "agent.md": {
-          "purpose": "Defines the AI agent's persona, capabilities, and expertise",
+        "agent-index.md": {
+          "purpose": "Provides a centralized reference to all agent components",
           "features": [
-            "Agent identity",
-            "Skill definition",
-            "Expert domains",
-            "Interaction style"
+            "Component listing",
+            "Usage examples",
+            "Quick reference navigation"
           ],
           "common_changes": [
-            "Customize expertise domains",
-            "Adjust personality traits",
-            "Add specialized capabilities"
+            "Add new agent components",
+            "Update component descriptions",
+            "Modify usage examples"
           ]
         },
-        "rulebook.md": {
-          "purpose": "Establishes rules and guidelines for agent behavior",
+        "agent/identity.md": {
+          "purpose": "Defines the AI agent's core identity and expertise",
+          "features": ["Agent identity", "Core expertise"],
+          "common_changes": [
+            "Customize expertise domains",
+            "Adjust identity traits"
+          ]
+        },
+        "agent/capabilities.md": {
+          "purpose": "Defines what the agent can do",
           "features": [
-            "Coding guidelines",
-            "Interaction rules",
-            "Decision framework",
-            "Quality standards"
+            "Project guideline capabilities",
+            "Code quality practices",
+            "Testing procedures",
+            "Workflow capabilities"
           ],
           "common_changes": [
-            "Add domain-specific rules",
-            "Customize coding standards",
-            "Adjust decision-making framework"
+            "Add specialized capabilities",
+            "Modify coding practices",
+            "Update testing procedures"
+          ]
+        },
+        "agent/limitations.md": {
+          "purpose": "Defines what the agent will not do",
+          "features": ["Boundary definition", "Limitation guidelines"],
+          "common_changes": [
+            "Adjust boundary definitions",
+            "Update limitation scenarios"
+          ]
+        },
+        "rulebook-index.md": {
+          "purpose": "Provides a centralized reference to all rulebook components",
+          "features": [
+            "Component listing",
+            "Usage examples",
+            "Quick reference navigation"
+          ],
+          "common_changes": [
+            "Add new rulebook components",
+            "Update component descriptions",
+            "Modify usage examples"
+          ]
+        },
+        "rulebook/general-principles.md": {
+          "purpose": "Establishes core coding principles",
+          "features": [
+            "Simplicity guidelines",
+            "Code organization rules",
+            "Environment awareness"
+          ],
+          "common_changes": [
+            "Add domain-specific principles",
+            "Customize coding principles"
+          ]
+        },
+        "rulebook/documentation-testing.md": {
+          "purpose": "Defines standards for documentation and testing",
+          "features": [
+            "Documentation practices",
+            "Testing requirements",
+            "Error handling guidelines"
+          ],
+          "common_changes": [
+            "Update testing standards",
+            "Add specific documentation patterns"
           ]
         }
       },
       "implementation_details": {
         "agent_system": "The template is designed for Cursor's AI system and compatible with Claude/GPT models",
-        "customization": "Easy to customize for specific domains or coding styles",
-        "integration": "Works seamlessly with Cursor's context system and tool capabilities"
+        "customization": "Easy to customize for specific domains or coding styles by modifying individual component files",
+        "integration": "Works seamlessly with Cursor's context system and tool capabilities",
+        "modularity": "Split into smaller context-specific files to optimize token usage and improve AI performance"
       },
       "directory": "cursor_templates"
     }

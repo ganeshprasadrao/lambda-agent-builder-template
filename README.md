@@ -29,8 +29,21 @@ templates-hq/
 │   ├── aws_lambda_agent_builder/   # AI agent on AWS Lambda template
 │   └── aws_lambda_fast_api/        # FastAPI on AWS Lambda template
 ├── cursor_templates/    # Cursor AI agent templates
-│   ├── agent.md         # Agent persona definition
-│   └── rulebook.md      # Agent rulebook and guidelines
+│   ├── agent-index.md   # Index file for agent components
+│   ├── agent/           # Agent component files
+│   │   ├── identity.md  # Agent identity definition
+│   │   ├── capabilities.md # Agent capabilities definition
+│   │   └── limitations.md # Agent limitations definition
+│   ├── rulebook-index.md # Index file for rulebook components
+│   └── rulebook/        # Rulebook component files
+│       ├── general-principles.md # General coding principles
+│       ├── documentation-testing.md # Documentation and testing standards
+│       ├── security-practices.md # Security best practices
+│       ├── workflow-preferences.md # Coding workflow preferences
+│       ├── execution-priorities.md # Execution priorities and mindset
+│       ├── project-guidelines.md # Project execution guidelines
+│       ├── tech-stack.md # Tech stack preferences
+│       └── testing-workflow.md # Testing workflow and TDD process
 └── README.md            # This file
 ```
 
@@ -96,11 +109,12 @@ You can also check the metadata JSON files in the `metadata/` directory for stru
 
 ### agent-rulebook
 
-- Structured agent persona definition
-- Comprehensive rulebook for consistent behavior
+- Structured agent persona definition with modular components
+- Comprehensive rulebook split into targeted context-specific files
 - Clear guidelines for AI coding assistant behavior
 - Customizable domains of expertise
 - Integration with Cursor's context system
+- Optimized for token usage with modular file structure
 
 ## 🤝 Contributing
 
