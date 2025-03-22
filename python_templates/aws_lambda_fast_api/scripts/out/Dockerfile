@@ -1,0 +1,43 @@
+FROM public.ecr.aws/docker/library/python:3.12.4
+
+ARG MY_GITHUB_TOKEN
+ARG PERPLEXITY_API_KEY
+ARG GROQ_API_KEY
+ARG DEEPSEEK_API_KEY
+ARG HUGGINGFACE_API_KEY
+ARG HYPERBOLIC_API_KEY
+ARG TOGETHER_API_KEY
+ARG AWS_ACCESS_KEY_ID
+ARG AWS_SECRET_ACCESS_KEY
+ARG DATABASE_URL
+
+ENV PYTHONUNBUFFERED=1
+ENV GITHUB_TOKEN=${MY_GITHUB_TOKEN}
+ENV PERPLEXITY_API_KEY=${PERPLEXITY_API_KEY}
+ENV GROQ_API_KEY=${GROQ_API_KEY}
+ENV DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+ENV HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY}
+ENV HYPERBOLIC_API_KEY=${HYPERBOLIC_API_KEY}
+ENV TOGETHER_API_KEY=${TOGETHER_API_KEY}
+ENV AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+ENV AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+ENV DATABASE_URL=${DATABASE_URL}
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+
+# Create a celery user
+RUN useradd -u 1000 celery
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt 
+
+COPY . .
+
+# Change ownership of the /app directory to the celery user
+RUN chown -R celery:celery /app
+
+EXPOSE 8000
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--timeout-keep-alive", "60"]

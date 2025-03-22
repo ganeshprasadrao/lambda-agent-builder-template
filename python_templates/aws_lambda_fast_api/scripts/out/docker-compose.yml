@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  app:
+    # Use your production image built and pushed to ECR.
+    image: dqx-backend:latest
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --timeout-keep-alive 60
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - MY_GITHUB_TOKEN=${MY_GITHUB_TOKEN}
+      - PERPLEXITY_API_KEY=${PERPLEXITY_API_KEY}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+      - HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY}
+      - HYPERBOLIC_API_KEY=${HYPERBOLIC_API_KEY}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+    depends_on:
+      - rabbitmq
+
+  celery_worker:
+    image: dqx-backend:latest
+    command: celery -A app.celery worker --loglevel=info
+    user: celery
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - MY_GITHUB_TOKEN=${MY_GITHUB_TOKEN}
+      - PERPLEXITY_API_KEY=${PERPLEXITY_API_KEY}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+      - HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY}
+      - HYPERBOLIC_API_KEY=${HYPERBOLIC_API_KEY}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+    # Optionally, you can override CELERY_BROKER_URL here if needed:
+    # - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672/
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
