@@ -1,0 +1,64 @@
+{
+  "templates": [
+    {
+      "name": "agent-rulebook",
+      "github_url": "https://github.com/ganeshprasadrao/templates-hq",
+      "description": "A comprehensive template for Cursor AI agent development with rulebook",
+      "purpose": "Provides a structured foundation for creating AI agents with defined rules and behaviors in Cursor",
+      "use_cases": [
+        "Custom AI coding assistants",
+        "Specialized development workflows",
+        "Domain-specific AI agents",
+        "Code generation with specific patterns"
+      ],
+      "tech_stack": ["Cursor", "Claude/GPT models", "Markdown"],
+      "structure": {
+        "agent.md": "Main agent persona and capabilities definition",
+        "rulebook.md": "Rules and guidelines for the agent's behavior"
+      },
+      "features": [
+        "Structured agent persona definition",
+        "Comprehensive rulebook for consistent behavior",
+        "Easy customization for specific domains",
+        "Compatible with Cursor's AI capabilities",
+        "Clear organization of agent skills and limitations"
+      ],
+      "key_files": {
+        "agent.md": {
+          "purpose": "Defines the AI agent's persona, capabilities, and expertise",
+          "features": [
+            "Agent identity",
+            "Skill definition",
+            "Expert domains",
+            "Interaction style"
+          ],
+          "common_changes": [
+            "Customize expertise domains",
+            "Adjust personality traits",
+            "Add specialized capabilities"
+          ]
+        },
+        "rulebook.md": {
+          "purpose": "Establishes rules and guidelines for agent behavior",
+          "features": [
+            "Coding guidelines",
+            "Interaction rules",
+            "Decision framework",
+            "Quality standards"
+          ],
+          "common_changes": [
+            "Add domain-specific rules",
+            "Customize coding standards",
+            "Adjust decision-making framework"
+          ]
+        }
+      },
+      "implementation_details": {
+        "agent_system": "The template is designed for Cursor's AI system and compatible with Claude/GPT models",
+        "customization": "Easy to customize for specific domains or coding styles",
+        "integration": "Works seamlessly with Cursor's context system and tool capabilities"
+      },
+      "directory": "cursor_templates"
+    }
+  ]
+}
