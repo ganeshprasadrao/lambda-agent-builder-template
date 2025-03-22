@@ -16,7 +16,8 @@
         "FastAPI",
         "AWS Lambda",
         "Zappa",
-        "LangChain/LangGraph"
+        "LangChain/LangGraph",
+        "uv (dependency management)"
       ],
       "structure": {
         "core/": "Core agent logic and components",
@@ -96,7 +97,8 @@
         "FastAPI",
         "AWS Lambda",
         "Zappa",
-        "Mangum"
+        "Mangum",
+        "uv (dependency management)"
       ],
       "structure": {
         "core/": "Core application components",
@@ -110,7 +112,8 @@
         "main.py": "FastAPI application with route configurations",
         "lambda_handler.py": "AWS Lambda handler with Mangum",
         "zappa_settings.json": "Zappa deployment configuration for multiple environments",
-        "requirements.txt": "Project dependencies"
+        "pyproject.toml": "Project dependencies and build configuration",
+        "uv.lock": "Lock file for uv dependency management"
       },
       "features": [
         "High-performance API endpoints with FastAPI",

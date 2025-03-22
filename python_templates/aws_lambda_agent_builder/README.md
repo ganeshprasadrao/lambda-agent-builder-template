@@ -34,13 +34,19 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Install dependencies:
+3. Install uv (if not already installed):
 
 ```bash
-pip install -e .
+pip install uv
 ```
 
-4. Set up your environment variables:
+4. Install dependencies using uv:
+
+```bash
+uv pip install -e .
+```
+
+5. Set up your environment variables:
 
 ```bash
 cp .env.example .env

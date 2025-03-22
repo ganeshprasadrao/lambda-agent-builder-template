@@ -35,13 +35,19 @@ A lightweight template for building FastAPI applications deployed on AWS Lambda.
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. Install dependencies
+3. Install uv (if not already installed)
 
    ```bash
-   pip install -e .
+   pip install uv
    ```
 
-4. Create a `.env` file with your configuration
+4. Install dependencies using uv
+
+   ```bash
+   uv pip install -e .
+   ```
+
+5. Create a `.env` file with your configuration
    ```
    LOG_LEVEL=INFO
    API_TITLE="My FastAPI Service"

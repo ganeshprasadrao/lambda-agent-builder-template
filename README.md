@@ -55,6 +55,7 @@ templates-hq/
 - **Metadata**: JSON files provide structured information about each template with implementation details
 - **Serverless**: Focus on serverless architectures for scalability and cost-efficiency
 - **Developer-Friendly**: Designed for easy understanding with detailed docstrings and usage guidance
+- **Modern Python Tooling**: All Python templates use uv for fast, reliable dependency management
 
 ## 🛠️ Using Templates
 
